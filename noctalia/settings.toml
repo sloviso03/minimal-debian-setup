@@ -1,0 +1,90 @@
+[bar.default]
+capsule_opacity = 0.5
+center = [ "launcher", "clock", "wallpaper" ]
+concave_edge_corners = false
+end = [ "clipboard", "volume", "battery", "tray", "control-center" ]
+margin_ends = 0
+position = "bottom"
+radius = 0
+reserve_space = false
+smart_auto_hide = true
+start = [ "workspaces", "active_window" ]
+widget_spacing = 12
+
+[control_center]
+hidden_tabs = [ "weather" ]
+sidebar_section = "none"
+
+[osd]
+position = "top_right"
+
+[shell]
+font_family = "JetBrains Mono"
+polkit_agent = true
+
+    [shell.animation]
+    speed = 1.3500000201165676
+
+    [shell.launcher]
+    categories = false
+    fetch_exchange_rates = false
+    show_icons = false
+    sort_by_usage = false
+
+        [shell.launcher.providers.calculator]
+        global = false
+
+    [shell.panel]
+    clipboard_position = "bottom_right"
+    control_center_position = "bottom_right"
+    open_near_click_control_center = true
+    open_near_click_launcher = true
+    session_placement = "floating"
+    session_position = "bottom_right"
+    wallpaper_placement = "floating"
+
+[theme]
+builtin = "Gruvbox"
+community_palette = "Monochrome"
+mode = "dark"
+pure_black_dark = true
+source = "community"
+wallpaper_scheme = "muted"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "qt" ]
+
+[wallpaper]
+directory = "~/Pictures/wallpapers"
+transition_duration = 500
+transition_on_startup = true
+
+    [wallpaper.default]
+    path = "~/Pictures/wallpapers/1.png"
+
+    [wallpaper.last]
+    path = "~/Pictures/wallpapers/1.png"
+
+[weather]
+enabled = false
+
+[widget.clock]
+anchor = true
+format = "{:%H:%M}"
+tooltip_format = "{:%H:%M}"
+vertical_format = "{:%H:%M}"
+
+[widget.launcher]
+glyph = "rocket"
+
+[widget.notifications]
+enabled = true
+
+[widget.tray]
+drawer = true
+
+[widget.workspaces]
+focused_output_only = true
+hide_when_empty = true
+labels_only_when_occupied = true
+style = "minimal"
