@@ -76,5 +76,5 @@ fi
 # Aliases
 alias ls='ls -lah --color=auto'
 alias la='ls -la --color=auto'
-alias fastfetch='fastfetch --structure Title:Separator:Os:Kernel:Uptime:Packages:WM:Terminal:Shell:Memory:Disk:Battery:LocalIp:Locale'
+alias lovifetch='uname -a; uname -r; cat /etc/os-release; lscpu | grep -E "Model name|Architecture|CPU\(s\)|Thread|Core|Socket"; free -h;'
 alias fzf-clear='history -c && history -w && clear'
