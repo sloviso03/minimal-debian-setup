@@ -61,10 +61,9 @@ fi
 
 
 # Exports
-eval "$(zoxide init bash --cmd cd)"
 export PATH="$HOME/.local/bin:$PATH"
-export EDITOR="micro"
-export VISUAL="micro"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export QT_QPA_PLATFORM=wayland
 export MOZ_ENABLE_WAYLAND=1
 

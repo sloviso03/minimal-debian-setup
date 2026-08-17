@@ -23,18 +23,26 @@ cat << 'EOF'
 
 EOF
 
-
-echo -e "${G}Installing packages...${RESET}";
+echo -e "${G}Installing packages...${RESET}"
 bash packages.sh
-bash ./noctalia/noctalia.sh
 
-echo -e "${G}Installing dotfiles...${RESET}";
+echo -e "${G}Installing .NET and C#...${RESET}"
+bash c-sharp.sh
+
+echo -e "${G}Installing Neovim...${RESET}"
+bash nvim.sh
+
+echo -e "${G}Installing Noctalia...${RESET}"
+bash noctalia/noctalia.sh
+
+echo -e "${G}Installing dotfiles...${RESET}"
 bash dotfiles.sh
 bash hide.sh
 
-echo -e "${G}Installing NetworkManager...${RESET}";
-sudo usermod -aG netdev $USER
+echo -e "${G}Configuring NetworkManager...${RESET}"
+sudo usermod -aG netdev "$USER"
 sudo systemctl enable --now NetworkManager
+bash ./network.sh
 
 read -r -p "Reboot system now? (Y/N) " doit
 

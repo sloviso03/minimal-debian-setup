@@ -21,11 +21,9 @@ cp -f bash/.bashrc "$HOME/.bashrc"
 cp -f bash/.bash_profile "$HOME/.bash_profile"
 hash -r
 
-# Micro
-sudo update-alternatives --set editor /usr/bin/micro
-mkdir -p ~/.config/micro
-bash micro.sh
-cp -r micro/* ~/.config/micro/
+# Nvim
+mkdir -p ~/.config/nvim
+cp -r nvim/* ~/.config/nvim/
 
 # Wallpapers
 mkdir -p "$HOME/Pictures/wallpapers"
